@@ -1,0 +1,47 @@
+
+.separador {
+    /* margin-top: 20px;
+    margin-bottom: 20px; */
+    margin: 20px auto; 
+    width: 80%; 
+    height: 1px;
+    position: absolute;
+    z-index: 0;
+    top: 50px;
+    left: 0;
+}
+
+@media screen and (max-width: 1024px) {
+    .separador {
+        width: 80%; 
+        margin: 1.5rem auto; 
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .separador {
+        width: 90%; 
+        margin: 1.5rem auto; 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .separador {
+        width: 95%; 
+        margin: 1rem auto; 
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .separador {
+        width: 100%; 
+        margin: 0.5rem auto; 
+    }
+}
+
+@media screen and (max-width: 230px) {
+    .separador {
+        width: 100%; 
+        margin: 0.5rem auto; 
+    }
+}
