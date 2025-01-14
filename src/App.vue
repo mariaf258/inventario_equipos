@@ -5,7 +5,7 @@ import {RouterView } from 'vue-router'
 <template>
   <router-view></router-view>
   <!-- <inventarioEquipos></inventarioEquipos> -->
-   
+  
 </template>
 
 <style scoped></style>

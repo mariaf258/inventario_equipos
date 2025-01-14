@@ -220,7 +220,7 @@ html {
   text-shadow: 2px 2px 5px rgb(67, 42, 136, 0.4);
 }
 
-.separador {
+.separador1 {
   margin-top: 20px;
   margin-bottom: 20px;
   width: 100%;
@@ -498,4 +498,28 @@ button.btn-link {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+}
+
+
+
+@media screen and (max-width: 480px) {
+  .container-er {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+    background-color: #f6f6f6;
+    border-radius: 10px;
+  } 
+  
+  .userIcon {
+  position: absolute;
+  top: 10px;
+  right: -75%;
+  }
+
+  .separador1 {
+    width: 670px;
+  }
 }

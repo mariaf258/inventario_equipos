@@ -54,7 +54,7 @@ const eliminarEmpleado =async(id : string)=>{
         <div class="login">
           <h1>
             AGREGAR EMPLEADO
-            <hr />
+            <hr class="separador2 justify-content-center" />
           </h1>
 
           <h2>C.I. MINAS LA AURORA S.A.S.</h2>
@@ -63,7 +63,7 @@ const eliminarEmpleado =async(id : string)=>{
           
           <section class="section-empleado">
             <div class="formulario">
-            <form class="form-empleado" @submit.prevent="crearEmpleado()">
+            <form class="form-empleado justify-content-center" @submit.prevent="crearEmpleado()">
               <!-- <button class="btn btn-primary-volver" type="submit"> Volver </button> -->
 
               <div class="form-group">

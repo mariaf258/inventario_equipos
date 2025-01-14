@@ -75,17 +75,17 @@ const cancelUpdate = () => {
 </script>
 
 <template>
-    <div id="app4">
+    <div id="app6">
 
         <div class="button-btn">
             <a class="btn btn-primary" @click="router.go(-1)">Volver</a>
 
         </div>  
 
-        <div class="form4 justify-content-center">
+        <div class="form6 justify-content-center">
         <div class="login">
             <h1>ELIMINAR EMPLEADO</h1>
-            <hr />
+            <hr class="separador3"/>
             <h2>C.I. MINAS LA AURORA S.A.S.</h2>
             <br />
             <!-- <h6>SELECCIONAR EMPLEADO</h6> -->
@@ -129,7 +129,7 @@ const cancelUpdate = () => {
             </section>
         </div>
         </div>
-        <footer class="footer4 d-flex w-100 justify-content-center">
+        <footer class="footer6 d-flex w-100 justify-content-center">
         <img src="../../public/img/logo-mla.png" alt="Logo MLA" />
         </footer>
     </div>

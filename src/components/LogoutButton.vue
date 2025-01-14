@@ -40,4 +40,7 @@ const logout = () => {
     </div>
 </template>
 
+<style>
+@import '/src/assets/logoutButton.css'
+</style>
 

@@ -164,7 +164,7 @@ header h2 {
   background-color: #432a88;
   border-color: #432a88;
 }
-
+/* 
 .userIcon {
   width: 32px;
   height: 32px;
@@ -186,7 +186,7 @@ header h2 {
   top: 10px;
   right: 10px;
   z-index: 1;
-}
+} */
 
 .card-grid {
   display: grid;
@@ -494,11 +494,11 @@ header h2 {
     justify-content: flex-start;
   }
 
-  .userIcon {
+  /* .userIcon {
     position: absolute;
     top: 10px;
     right: 10px;
-  }
+  } */
 
   .separador {
     width: 1000px;
@@ -533,12 +533,12 @@ header h2 {
   .content {
     justify-content: flex-start;
   }
-
+/* 
   .userIcon {
     position: absolute;
     top: 10px;
     right: -200px;
-  }
+  } */
 
   .separador {
     width: 1300px;
@@ -578,12 +578,12 @@ header h2 {
   .content {
     justify-content: flex-start;
   }
-
+/* 
   .userIcon {
     position: absolute;
     top: 10px;
     right: -30px;
-  }
+  } */
 
   .card-grid {
     grid-template-columns: repeat(4, 1fr);
@@ -632,11 +632,11 @@ header h2 {
     height: 29px;
   }
 
-  .userIcon {
+  /* .userIcon {
     position: absolute;
     top: 10px;
     right: -190px;
-  }
+  } */
 
   .dropdown-menu {
     position: absolute;
@@ -684,11 +684,11 @@ header h2 {
     padding: 8px;
   }
 
-  .userIcon {
+  /* .userIcon {
     position: absolute;
     top: 10px;
     right: -380px;
-  }
+  } */
 
   .card-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -730,12 +730,12 @@ header h2 {
   .header-right button {
     padding: 8px 15px;
   }
-
+/* 
   .userIcon {
     position: absolute;
     top: 10px;
     right: -310px;
-  }
+  } */
 
   .dropdown-menu {
     position: absolute;
@@ -796,7 +796,7 @@ header h2 {
     padding: 10px;
     justify-content: center;
   }
-
+/* 
   .userIcon {
     position: relative;
     top: 10px;
@@ -807,7 +807,7 @@ header h2 {
     position: relative;
     top: 10px;
     right: -500px;
-  }
+  } */
 
   .card-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -862,7 +862,7 @@ header h2 {
   .header-right input {
     width: 100%;
   }
-
+/* 
   .userIcon {
     position: absolute;
     top: 10px;
@@ -873,7 +873,7 @@ header h2 {
     position: relative;
     top: 10px;
     right: -500px;
-  }
+  } */
 
   .card-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -924,12 +924,12 @@ header h2 {
     padding: 10px;
     justify-content: center;
   }
-
+/* 
   .userIcon {
     position: absolute;
     top: 10px;
     right: -500px;
-  }
+  } */
 
   .header-right input {
     width: 100%;

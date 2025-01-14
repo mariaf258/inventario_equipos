@@ -1,0 +1,114 @@
+
+.userIcon {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.userIcon-white {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+}
+
+
+
+@media screen and (max-width: 1300px) {
+        .userIcon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        }
+    }
+    
+    @media screen and (max-width: 1200px) {
+        .userIcon {
+        position: absolute;
+        top: 10px;
+        right: -200px;
+        }
+    }
+    
+    @media screen and (max-width: 1050px) {
+
+        .userIcon {
+        position: absolute;
+        top: 10px;
+        right: -30px;
+        }
+    
+    }
+    
+    @media screen and (max-width: 1030px) {
+        .userIcon {
+        position: absolute;
+        top: 10px;
+        right: -190px;
+        }
+    }
+    
+    @media screen and (max-width: 640px) {
+        .userIcon {
+        position: absolute;
+        top: 10px;
+        right: -380px;
+        }
+    }
+    
+    @media screen and (max-width: 480px) {
+        .userIcon {
+            position: absolute;
+            top: 10px;
+            right: -75%;
+            }
+    }
+    
+    @media screen and (max-width: 320px) {
+        .userIcon {
+        position: relative;
+        top: 10px;
+        right: -500px;
+        }
+    
+        .userIcon-white {
+        position: relative;
+        top: 10px;
+        right: -500px;
+        }
+    }
+    
+    @media screen and (max-width: 319px) {
+        .userIcon {
+        position: absolute;
+        top: 10px;
+        right: -400px;
+        }
+    
+        .userIcon-white {
+        position: relative;
+        top: 10px;
+        right: -500px;
+        }
+    }
+    
+    @media screen and (max-width: 230px) {
+        .userIcon {
+        position: absolute;
+        top: 10px;
+        right: -500px;
+        }
+    } 
+    
+    
+    

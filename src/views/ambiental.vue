@@ -105,7 +105,7 @@ const guardarModulo =()=>{
             <LogoutButton />
           </nav>
 
-          <hr class="separador" />
+          <hr class="separador1" />
           <header>
             <div class="header-container">
               <div class="header-left">

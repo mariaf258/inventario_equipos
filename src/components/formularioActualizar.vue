@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<!-- <script setup lang="ts">
 import EquipoDefault from '@/utils/interfaces/InterfaceEquipos';
 import { EmpleadoServicio } from '@/services/empleados/EmpleadoServicio';
 
@@ -90,37 +90,7 @@ const cancelUpdate = () => {
 </script>
 
 <template>
-    <div id="app5">
-        <div class="button-btn">
-            <a class="btn btn-primary" @click="router.go(-1)">Volver</a>
-        </div>  
-    
-        <div class="form5 justify-content-center">
-            <div class="login">
-            <h1>ACTUALIZAR EMPLEADO</h1>
-
-            <hr class="separador3 justify-content-center" />
-
-            <h2>C.I. MINAS LA AURORA S.A.S.</h2>
-            <br />
-            <select class="form-select" 
-                v-model="selectedCard"
-                aria-label="Default select example">
-                <option disabled value="">Seleccione empleado</option>
-                <option
-                class="card-delete"
-                
-                v-for="card in cards"
-                :key="card.id"
-                :value="card"
-                @click="openUpdateForm(card)"
-                >
-                <h4>{{ card.name }} - </h4>
-                <p>{{ card.descripcion }}</p>
-                </option>
-            </select>
-    
-            <section v-if="selectedCard" class="section-empleado">
+    <section v-if="selectedCard" class="section-empleado">
                 <div class="formulario">
                 <form class="form-empleado" @submit.prevent="actualizarCard">
                     <div class="form-group">
@@ -185,15 +155,8 @@ const cancelUpdate = () => {
                 </form>
                 </div>
             </section>
-            </div>
-        </div>
-    
-        <footer class="footer5 d-flex w-100 justify-content-center">
-            <img src="../../public/img/logo-mla.png" alt="Logo MLA" />
-        </footer>
-        </div>
 </template>
 
 <style>
-@import '/src/assets/actualizarEmpleado.css';
-</style>
+@import '/src/assets/formularioActualizar.css'
+</style> -->

@@ -28,7 +28,7 @@ html {
   padding-top: 0;
 }
 
-.login hr {
+.separador2 {
   color: black;
   width: 80%;
   align-items: center;
@@ -219,4 +219,75 @@ section, form  {
   .form4 .buttons {
     grid-template-columns: 1fr; /* Botones en una sola columna */
   }
+}
+
+@media screen and (max-width: 480px) {
+  #app4 {
+    width: 100%;
+    height: 160vh;
+    background-color: #F6F6F6;
+    align-items: center;
+    display: grid;
+    place-items: center;
+  }
+
+  .form4 {
+    width: 90%;
+    padding: 20px 10px;
+    margin-top: 15%;
+    margin-bottom: 15%;
+  }
+
+  section,
+  form {
+    grid-template-columns: none;
+  }
+
+  .form-empleado {
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    right: 20%;
+  
+  }
+
+  .login {
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .login h1 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    margin-top: 0;
+    padding-top: 0;
+  }
+  
+  .separador2 {
+    color: black;
+    width: 10%;
+    align-items: center;
+    margin: 10px auto;
+    opacity: none;
+    margin-top: none;
+    font-weight: bold;
+  }
+  
+  .login h2 {
+    text-align: center;
+    font-size: 16px;
+    color: #595959;
+  }
+  
+  .login h3 {
+    text-align: center;
+    font-size: 16px;
+    color: black;
+  }
+  
+  .footer4 {
+    margin-top: -30px;
+  }
+  
 }

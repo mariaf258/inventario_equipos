@@ -75,7 +75,7 @@ export class EmpleadoServicio {
         }
     }
 
-                            filtrarEmpleadoPorModulo (cards: EquipoDefault[] ){
+        filtrarEmpleadoPorModulo (cards: EquipoDefault[] ){
         const cadenaRegex = localStorage.getItem("modulo")|| '' ;
     
         const empleadosPorModulo =   cards.filter((card) => card.etiqueta?.includes(cadenaRegex))
