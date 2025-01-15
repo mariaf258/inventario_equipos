@@ -164,6 +164,7 @@ header h2 {
   background-color: #432a88;
   border-color: #432a88;
 }
+
 /* 
 .userIcon {
   width: 32px;
@@ -321,7 +322,6 @@ header h2 {
   background-color: #ff4500;
 }
 
-
 .button-add {
   text-align: right;
   float: right;
@@ -388,7 +388,7 @@ header h2 {
   /* border: 1px solid #432a88; */
 }
 
-
+/* 
 
 .dropdown-menu {
   position: absolute;
@@ -465,7 +465,7 @@ header h2 {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
-}
+} */
 
 
 
@@ -637,7 +637,7 @@ header h2 {
     top: 10px;
     right: -190px;
   } */
-
+/* 
   .dropdown-menu {
     position: absolute;
     top: 0px;
@@ -649,7 +649,7 @@ header h2 {
     z-index: 1;
     min-width: 150px;
     transition: all 0.3s ease;
-  }
+  } */
 
   .card-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -737,7 +737,7 @@ header h2 {
     right: -310px;
   } */
 
-  .dropdown-menu {
+  /*.dropdown-menu {
     position: absolute;
     top: 0px;
     right: -320px;
@@ -748,7 +748,7 @@ header h2 {
     z-index: 1;
     min-width: 150px;
     transition: all 0.3s ease;
-  }
+  } */
 
   .card-grid {
     grid-template-columns: repeat(2, 1fr);
