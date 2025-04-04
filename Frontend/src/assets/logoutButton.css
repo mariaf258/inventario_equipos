@@ -1,0 +1,208 @@
+
+.userIcon {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.userIcon-white {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+}
+
+
+
+.dropdown-menu {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    background-color: rgba(67, 42, 136, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    z-index: 1;
+    min-width: 150px;
+    transition: all 0.3s ease;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.dropdown-menu li:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 0%;
+    width: 100%;
+}
+
+.dropdown-menu li:last-child {
+    margin-bottom: 10px;
+}
+
+.dropdown-menu hr {
+    margin-bottom: 10px;
+}
+
+.dropdown-divider li hr {
+    margin-bottom: 10px;
+}
+
+.dropdown-item {
+    margin: 15px 25px 0px 0px;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+.a{
+    color: white;
+}
+
+.dropdown-item:hover {
+    background-color: rgb(0, 0, 0, 0.1);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+@media screen and (max-width: 1300px) {
+    .userIcon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .userIcon {
+    position: absolute;
+    top: 10px;
+    right: -200px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .userIcon {
+    position: absolute;
+    top: 10px;
+    right: -30px;
+    }
+
+}
+
+@media screen and (max-width: 1030px) {
+    .userIcon {
+    position: absolute;
+    top: 10px;
+    right: -190px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .userIcon {
+    position: absolute;
+    top: 10px;
+    right: -380px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .userIcon {
+        position: absolute;
+        top: 10px;
+        right: -75%;
+        }
+    
+    .userIcon-white {
+        width: 32px;
+        height: 32px;
+        object-fit: cover;
+        cursor: pointer;
+        border-radius: 50%;
+        position: absolute;
+        top: 10px;
+        left: rem;
+        z-index: 1;
+    }
+    
+    .dropdown-menu {
+        position: absolute;
+        top: 0px;
+        margin-right: -78%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .userIcon {
+    position: relative;
+    top: 10px;
+    right: -500px;
+    }
+
+    .userIcon-white {
+    position: relative;
+    top: 10px;
+    right: -500px;
+    }
+}
+
+@media screen and (max-width: 319px) {
+    .userIcon {
+    position: absolute;
+    top: 10px;
+    right: -400px;
+    }
+
+    .userIcon-white {
+    position: relative;
+    top: 10px;
+    right: -500px;
+    }
+}
+
+@media screen and (max-width: 230px) {
+    .userIcon {
+    position: absolute;
+    top: 10px;
+    right: -500px;
+    }
+} 
+
+
