@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('tipo');
             $table->string('marca')->nullable();
             $table->string('modelo')->nullable();
-            $table->enum('estado', ['activo', 'inactivo', 'en_mantenimiento'])->default('activo');
+            $table->enum('estado', ['activo', 'inactivo', 'en mantenimiento'])->default('activo');
             $table->foreignId('ubicacion_id')->constrained('ubicaciones')->onDelete('cascade');
             $table->timestamps();
         });

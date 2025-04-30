@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Mantenimiento;
 use Illuminate\Http\Request;
 
 class MantenimientoController extends Controller
@@ -11,7 +12,7 @@ class MantenimientoController extends Controller
      */
     public function index()
     {
-        return response()->json(['mantenimientos' => Mantenimiento::all()], 200);
+        return response()->json(['Mantenimientos' => Mantenimiento::all()], 200);
     }
 
     /**
@@ -19,8 +20,14 @@ class MantenimientoController extends Controller
      */
     public function store(Request $request)
     {
-         $mantenimiento = Mantenimiento::create($request->all());
-        return response()->json(['mensaje' => 'Mantenimiento registrado exitosamente', 'mantenimiento' => $mantenimiento], 201);
+        $mantenimiento = new Mantenimiento;
+        $mantenimiento->equipo_id = $request->equipo_id;
+        $mantenimiento->descripcion = $request->descripcion;
+        $mantenimiento->fecha = $request->fecha;
+        $mantenimiento->tecnico = $request->tecnico;
+        $mantenimiento->save();
+
+        return response()->json(['mensaje' => 'Mantenimiento registrado exitosamente'], 201);
     }
 
     /**
@@ -28,7 +35,7 @@ class MantenimientoController extends Controller
      */
     public function show(string $id)
     {
-       return response()->json(['mantenimiento' => Mantenimiento::findOrFail($id)], 200);
+        return response()->json([Mantenimiento::findOrFail($id)], 200);
     }
 
     /**
@@ -36,9 +43,10 @@ class MantenimientoController extends Controller
      */
     public function update(Request $request, string $id)
     {
-       $mantenimiento = Mantenimiento::findOrFail($id);
+        $mantenimiento = Mantenimiento::findOrFail($id);
         $mantenimiento->update($request->all());
-        return response()->json(['mensaje' => 'Mantenimiento actualizado correctamente', 'mantenimiento' => $mantenimiento], 200);
+
+        return response()->json(['mensaje' => 'Mantenimiento actualizado correctamente'], 200);
     }
 
     /**
@@ -47,6 +55,7 @@ class MantenimientoController extends Controller
     public function destroy(string $id)
     {
         Mantenimiento::destroy($id);
-        return response()->json(['mensaje' => 'Mantenimiento eliminado correctamente'], 200);
+
+        return response()->json(['mensaje' => 'Mantenimiento eliminado correctamente']);
     }
 }

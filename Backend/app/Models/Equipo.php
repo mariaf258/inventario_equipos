@@ -12,6 +12,14 @@ class Equipo extends Model
     protected $fillable = [
         'user_id',
         'equipo_id',
+        'serial',
+        'ip',
+        'tipo',
+        'marca',
+        'modelo',
+        'estado',
+        'observaciones',
+        'ubicacion_id',
         'fecha_asignacion',
         'fecha_devolucion',
     ];
@@ -27,8 +35,8 @@ class Equipo extends Model
     /**
      * Relación: Una asignación pertenece a un equipo
      */
-    // public function equipo()
-    // {
-    //     return $this->belongsTo(Equipo::class);
-    // }
+    public function equipo()
+    {
+        return $this->belongsTo(Equipo::class);
+    }
 }

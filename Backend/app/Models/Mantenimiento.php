@@ -9,6 +9,8 @@ class Mantenimiento extends Model
 {
     use HasFactory;
 
+
+    protected $table = 'mantenimientos';
     protected $fillable = [
         'equipo_id',
         'descripcion',

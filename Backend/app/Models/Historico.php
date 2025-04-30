@@ -9,15 +9,14 @@ class Historico extends Model
 {
     use HasFactory;
 
+    protected $table = 'historico';
+
     protected $fillable = [
         'equipo_id',
         'accion',
         'fecha',
     ];
 
-    /**
-     * Relación: Un histórico pertenece a un equipo
-     */
     public function equipo()
     {
         return $this->belongsTo(Equipo::class);

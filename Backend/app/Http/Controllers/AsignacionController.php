@@ -2,51 +2,60 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Asignacion;
 use Illuminate\Http\Request;
 
 class AsignacionController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        return response()->json(['asignaciones' => Asignacion::all()], 200);
+        return response()->json(['asignaciones' => Asignacion::with(['user', 'equipo'])->get()], 200);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
-    {
-        $asignacion = Asignacion::create($request->all());
-        return response()->json(['mensaje' => 'Asignación creada exitosamente', 'asignacion' => $asignacion], 201);
-    }
+{
+    $request->validate([
+        'user_id' => 'required|exists:users,id',
+        'equipo_id' => 'required|exists:equipos,id',
+        'fecha_asignacion' => 'required|date|not_in:0000-00-00',
+        'fecha_devolucion' => 'nullable|date|after_or_equal:fecha_asignacion',
+    ]);
 
-    /**
-     * Display the specified resource.
-     */
+    $asignacion = Asignacion::create($request->all());
+
+    return response()->json([
+        'mensaje' => 'Asignación creada con éxito',
+        'asignacion' => $asignacion
+    ], 201);
+}
+
     public function show(string $id)
     {
-         return response()->json(['asignacion' => Asignacion::findOrFail($id)], 200);
+        $asignacion = Asignacion::with(['user', 'equipo'])->findOrFail($id);
+        return response()->json(['asignacion' => $asignacion], 200);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, string $id)
     {
-         $asignacion = Asignacion::findOrFail($id);
+        $request->validate([
+            'user_id' => 'sometimes|exists:users,id',
+            'equipo_id' => 'sometimes|exists:equipos,id',
+            'fecha_asignacion' => 'sometimes|date',
+            'fecha_devolucion' => 'nullable|date|after_or_equal:fecha_asignacion',
+        ]);
+
+        $asignacion = Asignacion::findOrFail($id);
         $asignacion->update($request->all());
-        return response()->json(['mensaje' => 'Asignación actualizada correctamente', 'asignacion' => $asignacion], 200);
+
+        return response()->json([
+            'mensaje' => 'Asignación actualizada correctamente',
+            'asignacion' => $asignacion
+        ], 200);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(string $id)
     {
-         Asignacion::destroy($id);
+        Asignacion::destroy($id);
         return response()->json(['mensaje' => 'Asignación eliminada correctamente'], 200);
     }
 }

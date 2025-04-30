@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Ubicacion;
 use Illuminate\Http\Request;
 
 class UbicacionController extends Controller
@@ -11,7 +12,7 @@ class UbicacionController extends Controller
      */
     public function index()
     {
-        return response()->json(['ubicaciones' => Ubicacion::all()], 200);
+        return response()->json(['Ubicaciones' => Ubicacion::all()], 200);
     }
 
     /**
@@ -19,8 +20,12 @@ class UbicacionController extends Controller
      */
     public function store(Request $request)
     {
-        $ubicacion = Ubicacion::create($request->all());
-        return response()->json(['mensaje' => 'Ubicación creada exitosamente', 'ubicacion' => $ubicacion], 201);
+        $ubicacion = new Ubicacion;
+        $ubicacion->nombre = $request->nombre;
+        $ubicacion->descripcion = $request->descripcion;
+        $ubicacion->save();
+
+        return response()->json(['mensaje' => 'Ubicación creada exitosamente'], 201);
     }
 
     /**
@@ -28,8 +33,7 @@ class UbicacionController extends Controller
      */
     public function show(string $id)
     {
-        return response()->json(['ubicacion' => Ubicacion::findOrFail($id)], 200);
-
+        return response()->json([Ubicacion::findOrFail($id)], 200);
     }
 
     /**
@@ -39,7 +43,8 @@ class UbicacionController extends Controller
     {
         $ubicacion = Ubicacion::findOrFail($id);
         $ubicacion->update($request->all());
-        return response()->json(['mensaje' => 'Ubicación actualizada correctamente', 'ubicacion' => $ubicacion], 200);
+
+        return response()->json(['mensaje' => 'Ubicación actualizada correctamente'], 200);
     }
 
     /**
@@ -48,6 +53,7 @@ class UbicacionController extends Controller
     public function destroy(string $id)
     {
         Ubicacion::destroy($id);
-        return response()->json(['mensaje' => 'Ubicación eliminada correctamente'], 200);
+
+        return response()->json(['mensaje' => 'Ubicación eliminada correctamente']);
     }
 }

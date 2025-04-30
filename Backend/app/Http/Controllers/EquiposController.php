@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Asignacion;
 use App\Models\Equipo;
 use Illuminate\Http\Request;
 
@@ -21,7 +20,15 @@ class EquiposController extends Controller
      */
     public function store(Request $request)
     {
-        $equipo = Equipo::create($request->all());
+        $equipo = new Equipo;
+        $equipo->serial = $request->serial;
+        $equipo->ip = $request->ip;
+        $equipo->tipo = $request->tipo;
+        $equipo->marca = $request->marca;
+        $equipo->modelo = $request->modelo;
+        $equipo->estado = $request->estado;
+        $equipo->ubicacion_id = $request->ubicacion_id;
+        $equipo->save();
         return response()->json(['mensaje'=>'Equipo Creado Con Exito'], 201);
     }
 
